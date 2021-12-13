@@ -63,6 +63,7 @@ Additional features supported by the **premium** version:
 
 Planned features for the **premium** version:
 - [ ] Mempool sniping.
+- [ ] Rug pull front-running.
 - [ ] Trailing auto-sell.
 - [ ] Sell using a delay
 - [ ] Other liquidity sniping methods.
