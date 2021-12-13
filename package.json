@@ -13,12 +13,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamroyalgit/bsc-sniper.git"
+    "url": "git+https://github.com/zookyy/bsc-sniper/bsc-sniper.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamroyalgit/bsc-sniper/issues"
+    "url": "https://github.com/zookyy/bsc-sniper/issues"
   },
-  "homepage": "https://github.com/iamroyalgit/bsc-sniper#readme"
+  "homepage": "https://github.com/zookyy/bsc-sniper/bsc-sniper#readme"
 }
