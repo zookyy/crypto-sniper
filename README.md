@@ -18,6 +18,8 @@
     <li>
 		<a href="#description">Description</a>
 		<ul>
+			<li><a href="#obfuscation">Obfuscation</a></li>
+			<li><a href="#open-source">Open Source</a></li>
 			<li><a href="#features">Features</a></li>
 			<li><a href="#supported-chains">Supported chains</a></li>
 			<li><a href="#supported-tokens">Supported tokens</a></li>
@@ -44,6 +46,16 @@ The bot is extremely fast as long as you use a **good** node and not a public on
 <br><br>
 The bot uploaded on github is the **lite** version of the real bot. 
 You do **not** get all of the features from the premium version.
+
+### Obfuscation
+The source code of both (lite & premium) version **is** and will currently remain obfuscated.<br>
+I've chosen to keep the source obfuscated due to the competition in the crypto community.<br>
+I am more than happy to help, but I do not tolerate leeching of of somebody else's hard work.<br>
+
+### Open Source
+For people that are skeptic (which I definitely understand, I would be too), I will most likely publish an even more basic bot in the near future.
+This bot will not contain basic functions like multi-chain support. This bot however, will be kept open source for the people that want to have a look at it.
+
 ### Features
 
 Current features supported by the **lite** version:
