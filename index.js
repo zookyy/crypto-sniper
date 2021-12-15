@@ -15,7 +15,6 @@
 const chalk = require('chalk');
 const ethers = require('ethers');
 const fs = require('fs').promises;
-const request = require('request-promise');
 const args = require('minimist')(process.argv.slice(2));
 
 let ConsoleLog = console.log;
@@ -68,9 +67,6 @@ process.on('uncaughtException', (err, origin) => {
 /*=================================================*/\n\n`);
 
     msg.primary('[debug::main] Eryx Lite has been started.');
-
-    process.exit();
-
 
 	// balance check
     if(network.bnb_balance == 0) {
