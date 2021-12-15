@@ -108,7 +108,7 @@ The bot currently supports any token using the uniswap interface.
 2. Download and install Git from <a href="https://git-scm.com/downloads">here</a>.
 3. Open a command prompt / terminal and clone the repository.
 	```sh
-	git clone https://github.com/zookyy/bsc-sniper.git && cd snipr
+	git clone https://github.com/zookyy/bsc-sniper.git && cd bsc-sniper
 	```
 4. In the same command prompt, install the NPM packages.
 	```sh
@@ -119,11 +119,6 @@ The bot currently supports any token using the uniswap interface.
 ### Configuration
 
 ```ini
-[SNIPER]
-
-; DO NOT REMOVE.
-IDENTIFIER=6a97b1371d83c396e9a30f20c7486fd04f813e074c127f2cfeef62017f8103c7
-
 [WALLET]
 ; This is your BSC wallet's private key.
 SECRET_KEY=private_wallet_key
@@ -152,9 +147,9 @@ BUY_SLIPPAGE=10
 ```
 
 ### Usage
-To launch the bot use the command ```node snipr.js```
+To launch the bot use the command ```npm run main```
 
-#### Parameters
+#### Premium parameters
 <table>
   <tr>
     <th>Parameter</th>
@@ -167,14 +162,6 @@ To launch the bot use the command ```node snipr.js```
   <tr>
     <td>--wrapped</td>
     <td>Uses the wrapped version of the bnb/eth token. (available for all blockchains)</td>
-  </tr>
-</table>
-
-#### Premium parameters
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Description</th>
   </tr>
   <tr>
     <td>--verify-tax</td>
