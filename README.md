@@ -149,7 +149,7 @@ BUY_SLIPPAGE=10
 ### Usage
 To launch the bot use the command ```npm run main```
 
-#### Parameters
+#### Premium parameters
 <table>
   <tr>
     <th>Parameter</th>
@@ -162,14 +162,6 @@ To launch the bot use the command ```npm run main```
   <tr>
     <td>--wrapped</td>
     <td>Uses the wrapped version of the bnb/eth token. (available for all blockchains)</td>
-  </tr>
-</table>
-
-#### Premium parameters
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Description</th>
   </tr>
   <tr>
     <td>--verify-tax</td>
