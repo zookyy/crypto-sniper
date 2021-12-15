@@ -56,7 +56,7 @@ Current features supported by the **lite** version:
 Additional features supported by the **premium** version:
 - [x] Block-offset system
 - [x] Multi blockchain support.
-- [x] Wrapped mode for BNB / ETH. 
+- [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Auto / manual selling
 - [x] Tax checker (all pairs are supported)
 - [x] Auto updates (updates are done automatically without the need of a re-download)
