@@ -206,7 +206,7 @@ class Network {
 
 	    } catch(e) {
 
-	        console.log(e);
+	        console.log(`[error::swap] ${e.error}`);
 	        process.exit();
 
 	    }
@@ -238,7 +238,7 @@ class Network {
 
 	    } catch(e) {
 
-	        console.log(e);
+	        console.log(`[error::estimategas] ${e.error}`);
 	        return this.estimateTransaction(amountIn, amountOutMin, contracts);
 
 	    }

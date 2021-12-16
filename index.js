@@ -43,6 +43,11 @@ process.on('uncaughtException', (err, origin) => {
 	// load config using our loaded cache
 	await config.load('config.ini');
 
+    if(!network.isETH(config.cfg.contracts.input)) {
+        msg.error(`[error::main] The free version of the bot can only use the BNB pair.`);
+        process.exit();
+    }
+
 	// initialize our network using a config.
 	await network.load();
 
