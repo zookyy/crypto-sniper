@@ -47,15 +47,16 @@ You do **not** get all of the features from the premium version.
 
 ### Features
 
-Current features supported by the **lite** version:
+Current features supported by the **FREE** version:
 
-- [x] Buying
+- [x] Buying (BNB pairs only)
 - [x] Gas estimation system
 - [x] Regular liquidity sniper
 
 Additional features supported by the **premium** version:
 - [x] Block-offset system
 - [x] Multi blockchain support.
+- [x] Buy using any token. 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Auto / manual selling
 - [x] Tax checker (all pairs are supported)
