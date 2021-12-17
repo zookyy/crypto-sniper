@@ -173,8 +173,7 @@ To launch the bot use the command ```npm run main```
 ## Go Premium
 
 <p>
-	The premium version comes with a <b>one-time</b> fee of <b>$250.00</b> (BNB/BUSD).<br>
-	You can see all of the features <a href="#features">here</a>.<br><br>
+	You can see all of the features <a href="#features">here</a>.<br>
 	If you wish to purchase the premium version of the bot, please contact me using the contact methods listed below.
 </p>
 
