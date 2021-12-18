@@ -73,6 +73,7 @@ Planned features for the **premium** version:
 
 ### Supported chains
 - Binance Smart Chain [tested]
+- Avalanche [tested]
 - Ethereum [not tested]
 - Polygon [not tested]
 
