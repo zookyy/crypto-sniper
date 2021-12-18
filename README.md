@@ -2,7 +2,7 @@
     <img src="https://i.imgur.com/mF3T0jn.png">
     <h3 align="center">Eryx - Crypto Sniper</h3>
     <p align="center">
-        Simple yet fast and efficient sniper-bot running on the BSC & ETH chain.
+        Simple yet fast and efficient sniper-bot running on the blockchain.
         <hr>
         <a href="#getting-started">⬇️ Download Lite Version</a>
         /
@@ -38,7 +38,7 @@
 ## Description
 ![Alt Text](https://i.imgur.com/N2STawe.gif)
 
-A fast and efficient bot written in NodeJS to automatically buy and sell tokens on the BSC & ETH chain as soon as liquidity is added and trade is enabled.
+A fast and efficient bot written in NodeJS to automatically buy and sell tokens on the blockchain as soon as liquidity is added and trade is enabled.
 <br><br>
 The bot is extremely fast as long as you use a **good** node and not a public one. With a node from Quicknode you can expect a buy/sell transaction in less than 5 seconds.
 <br><br>
@@ -101,7 +101,7 @@ The bot currently supports any token using the uniswap interface.
 			<li><a href="https://www.moralis.io/">Moralis (free)</a></li>
 		</ul>
 	</li>
-	<li>A BSC/ETH wallet with a private key. (it is recommended to create a new wallet to use with this bot)</li>
+	<li>A crypto wallet with a private key. (it is recommended to create a new wallet to use with this bot)</li>
 </ul>
 
 ### Installation
