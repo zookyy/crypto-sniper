@@ -57,6 +57,7 @@ Additional features supported by the **premium** version:
 - [x] Block-offset system
 - [x] Multi blockchain support.
 - [x] Buy using any token. 
+- [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Auto / manual selling
 - [x] Tax checker (all pairs are supported)
@@ -160,6 +161,14 @@ To launch the bot use the command ```npm run main```
   <tr>
     <td>--block-offset</td>
     <td>Waits an x amount of blocks before buying a token.</td>
+  </tr>
+  <tr>
+    <td>--input</td>
+    <td>Overwrites the input parameter in the config.</td>
+  </tr>
+  <tr>
+    <td>--output</td>
+    <td>Overwrites the output parameter in the config.</td>
   </tr>
   <tr>
     <td>--wrapped</td>
