@@ -150,7 +150,7 @@ BUY_SLIPPAGE=10
 ```
 
 ### Usage
-To launch the bot use the command ```npm run main```
+To launch the bot use the command ```node index.js```
 
 #### Premium parameters
 <table>
