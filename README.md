@@ -9,6 +9,8 @@
         <a href="https://github.com/zookyy/bsc-sniper/issues">🐞 Report a bug</a>
         /
         <a href="https://github.com/zookyy/bsc-sniper/issues">🆕 Request a feature</a>
+	/
+        <a href="https://eryx.io">🌐 Visit our website</a>
     </p>
 </div>
 
