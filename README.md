@@ -59,6 +59,7 @@ Additional features supported by the **premium** version:
 - [x] Block-offset system
 - [x] Multi blockchain support.
 - [x] Buy using any token. 
+- [x] Mempool sniping.
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Auto / manual selling
@@ -67,7 +68,6 @@ Additional features supported by the **premium** version:
 - [x] Support
 
 Planned features for the **premium** version:
-- [ ] Mempool sniping.
 - [ ] Rug pull front-running.
 - [ ] Trailing auto-sell.
 - [ ] Sell using a delay
