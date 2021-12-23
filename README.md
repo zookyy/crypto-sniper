@@ -63,6 +63,7 @@ Additional features supported by the **premium** version:
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Auto / manual selling
+- [x] Sell using a delay
 - [x] Tax checker (all pairs are supported)
 - [x] Auto updates (updates are done automatically without the need of a re-download)
 - [x] Support
@@ -70,7 +71,6 @@ Additional features supported by the **premium** version:
 Planned features for the **premium** version:
 - [ ] Rug pull front-running.
 - [ ] Trailing auto-sell.
-- [ ] Sell using a delay
 - [ ] Other liquidity sniping methods.
 - [ ] Contract analyzer.
 
