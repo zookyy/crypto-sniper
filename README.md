@@ -166,6 +166,14 @@ To launch the bot use the command ```node index.js```
     <td>Waits an x amount of blocks before buying a token.</td>
   </tr>
   <tr>
+    <td>--buy-only</td>
+    <td>Enables manual buy mode. This will only buy the token and then exit.</td>
+  </tr>
+  <tr>
+    <td>--sell-only</td>
+    <td>Enables manual sell mode. This will only sell the token and then exit.</td>
+  </tr>
+  <tr>
     <td>--input</td>
     <td>Overwrites the input parameter in the config.</td>
   </tr>
