@@ -58,17 +58,14 @@ Current features supported by the **FREE** version:
 Additional features supported by the **premium** version:
 - [x] All pairs supported.
 - [x] Multi blockchain support.
-
 - [x] Mempool sniping mode.
 - [x] Block-offset system
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Tax checker (all pairs are supported)
-
 - [x] Auto / manual selling
 - [x] Sell using a delay
 - [x] Sell using the space key
-
 - [x] Auto updates (updates are done automatically without the need of a re-download)
 - [x] Support
 
