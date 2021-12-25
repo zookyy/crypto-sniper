@@ -58,7 +58,6 @@ Current features supported by the **FREE** version:
 Additional features supported by the **premium** version:
 - [x] All pairs supported.
 - [x] Multi blockchain support.
-- [x] Mempool sniping mode.
 - [x] Block-offset system
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
@@ -71,6 +70,7 @@ Additional features supported by the **premium** version:
 
 Planned features for the **premium** version:
 - [ ] Rug pull front-running.
+- [ ] Mempool sniping mode.
 - [ ] Trailing auto-sell.
 - [ ] Other liquidity sniping methods.
 - [ ] Contract analyzer.
