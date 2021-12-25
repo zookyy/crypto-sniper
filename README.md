@@ -7,10 +7,10 @@
         <a href="#getting-started">⬇️ Download Lite Version</a>
         /
         <a href="https://github.com/zookyy/bsc-sniper/issues">🐞 Report a bug</a>
-        /
-        <a href="https://github.com/zookyy/bsc-sniper/issues">🆕 Request a feature</a>
 	/
         <a href="https://eryx.io">🌐 Visit our website</a>
+	/
+        <a href="https://eryx.io/discord">💬 Join our Discord</a>
     </p>
 </div>
 
