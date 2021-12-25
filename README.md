@@ -58,7 +58,6 @@ Current features supported by the **FREE** version:
 Additional features supported by the **premium** version:
 - [x] All pairs supported.
 - [x] Multi blockchain support.
-- [x] Block-offset system
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Tax checker (all pairs are supported)
@@ -67,6 +66,7 @@ Additional features supported by the **premium** version:
 - [x] Support
 
 Planned features for the **premium** version:
+- [ ] Block-offset system
 - [ ] Rug pull front-running.
 - [ ] Mempool sniping mode.
 - [ ] Sell using a delay
@@ -160,10 +160,6 @@ To launch the bot use the command ```node index.js```
   <tr>
     <th>Parameter</th>
     <th>Description</th>
-  </tr>
-  <tr>
-    <td>--block-offset</td>
-    <td>Waits an x amount of blocks before buying a token.</td>
   </tr>
   <tr>
     <td>--buy-only</td>
