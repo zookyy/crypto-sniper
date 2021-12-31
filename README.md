@@ -61,6 +61,8 @@ Additional features supported by the **premium** version:
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Tax checker (all pairs are supported)
+- [x] Sell using a delay
+- [x] Sell using the space key
 - [x] Auto / manual selling
 - [x] Auto updates (updates are done automatically without the need of a re-download)
 - [x] Support
@@ -69,8 +71,6 @@ Planned features for the **premium** version:
 - [ ] Block-offset system
 - [ ] Rug pull front-running.
 - [ ] Mempool sniping mode.
-- [ ] Sell using a delay
-- [ ] Sell using the space key
 - [ ] Trailing auto-sell.
 - [ ] Other liquidity sniping methods.
 - [ ] Contract analyzer.
