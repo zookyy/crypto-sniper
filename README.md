@@ -185,6 +185,10 @@ To launch the bot use the command ```node index.js```
     <td>--verify-tax</td>
     <td>Checks wether the taxes for buying / selling does not exceed the limits configured.</td>
   </tr>
+  <tr>
+    <td>--config</td>
+    <td>Used to specify a different config path (used for multi configs setup).</td>
+  </tr>
 </table>
 
 ## Go Premium
