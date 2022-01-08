@@ -64,13 +64,13 @@ Additional features supported by the **premium** version:
 - [x] Sell using a delay
 - [x] Sell using the space key
 - [x] Auto / manual selling
+- [x] Mempool sniping mode.
+- [x] Block-offset system
 - [x] Auto updates (updates are done automatically without the need of a re-download)
 - [x] Support
 
 Planned features for the **premium** version:
-- [ ] Block-offset system
 - [ ] Rug pull front-running.
-- [ ] Mempool sniping mode.
 - [ ] Trailing auto-sell.
 - [ ] Other liquidity sniping methods.
 - [ ] Contract analyzer.
@@ -188,6 +188,14 @@ To launch the bot use the command ```node index.js```
   <tr>
     <td>--config</td>
     <td>Used to specify a different config path (used for multi configs setup).</td>
+  </tr>
+  <tr>
+    <td>--block-offset</td>
+    <td>Waits an amount of blocks before sending out the buy transaction.</td>
+  </tr>
+  <tr>
+    <td>--force-approve</td>
+    <td>Forces the approve transaction for the input/output. (used for debugging)</td>
   </tr>
 </table>
 
