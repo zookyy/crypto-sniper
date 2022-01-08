@@ -39,7 +39,7 @@
 
 
 ## Description
-![Alt Text](https://i.imgur.com/N2STawe.gif)
+![Alt Text](https://i.imgur.com/8M3XqVQ.gif)
 
 A fast and efficient bot written in NodeJS to automatically buy and sell tokens on the blockchain as soon as liquidity is added and trade is enabled.
 <br><br>
