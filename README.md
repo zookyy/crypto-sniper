@@ -34,6 +34,7 @@
         </ul>
     </li>
 	<li><a href="#go-premium">Go Premium</a></li>
+	<li><a href="#contact">Contact</a></li>
 </ul>
 
 
