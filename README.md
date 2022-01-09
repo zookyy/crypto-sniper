@@ -71,6 +71,7 @@ Additional features supported by the **premium** version:
 - [x] Support
 
 Planned features for the **premium** version:
+- [ ] Pinksale support.
 - [ ] Rug pull front-running.
 - [ ] Trailing auto-sell.
 - [ ] Other liquidity sniping methods.
