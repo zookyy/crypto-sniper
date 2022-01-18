@@ -196,6 +196,10 @@ To launch the bot use the command ```node index.js```
     <td>Waits an amount of blocks before sending out the buy transaction.</td>
   </tr>
   <tr>
+    <td>--spam</td>
+    <td>Sends an x amount of transactions at the same time. (spam buy)</td>
+  </tr>
+  <tr>
     <td>--force-approve</td>
     <td>Forces the approve transaction for the input/output. (used for debugging)</td>
   </tr>
