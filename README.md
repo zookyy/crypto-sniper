@@ -62,6 +62,7 @@ Additional features supported by the **premium** version:
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Tax checker (all pairs are supported)
+- [x] Pinksale / dxsale support.
 - [x] Sell using a delay
 - [x] Sell using the space key
 - [x] Auto / manual selling
@@ -71,7 +72,6 @@ Additional features supported by the **premium** version:
 - [x] Support
 
 Planned features for the **premium** version:
-- [ ] Pinksale support.
 - [ ] Rug pull front-running.
 - [ ] Trailing auto-sell.
 - [ ] Other liquidity sniping methods.
@@ -82,6 +82,7 @@ Planned features for the **premium** version:
 - Avalanche [tested]
 - Ethereum [tested]
 - Polygon [not tested]
+- Fantom [not tested]
 
 If you wish to change the blockchain the bot will operate on, just change the WSS_NODE endpoint in config.ini to the right endpoint.
 
