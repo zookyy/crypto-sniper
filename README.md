@@ -57,7 +57,7 @@ Current features supported by the **FREE** version:
 - [x] Regular liquidity sniper
 
 Additional features supported by the **premium** version:
-- [x] All pairs supported.
+- [x] Buying (ALL pairs)
 - [x] Multi blockchain support.
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
