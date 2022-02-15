@@ -113,6 +113,8 @@ The bot currently supports any token using the uniswap interface.
 
 ### Installation
 
+Video tutorial: https://youtube.be/kNteZQmck4g
+
 1. Download and install NodeJS from <a href="https://nodejs.org/en/download/">here</a>.
 2. Download and install Git from <a href="https://git-scm.com/downloads">here</a>.
 3. Open a command prompt / terminal and clone the repository.
