@@ -81,7 +81,7 @@ Planned features for the **premium** version:
 - Binance Smart Chain [tested]
 - Avalanche [tested]
 - Ethereum [tested]
-- Polygon [not tested]
+- Polygon [tested]
 - Fantom [not tested]
 
 If you wish to change the blockchain the bot will operate on, just change the WSS_NODE endpoint in config.ini to the right endpoint.
