@@ -69,11 +69,10 @@ Additional features supported by the **premium** version:
 - [x] Mempool sniping mode.
 - [x] Block-offset system
 - [x] Auto updates (updates are done automatically without the need of a re-download)
+- [x] Trailing auto-sell.
 - [x] Support
 
 Planned features for the **premium** version:
-- [ ] Rug pull front-running.
-- [ ] Trailing auto-sell.
 - [ ] Other liquidity sniping methods.
 - [ ] Contract analyzer.
 
