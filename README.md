@@ -52,7 +52,7 @@ You do **not** get all of the features from the premium version.
 
 Current features supported by the **FREE** version:
 
-- [x] Buying (BNB pairs only)
+- [x] Buying (BNB & ETH pairs only)
 - [x] Gas estimation system
 - [x] Regular liquidity sniper
 
@@ -72,16 +72,18 @@ Additional features supported by the **premium** version:
 - [x] Trailing auto-sell.
 - [x] Support
 
-Planned features for the **premium** version:
-- [ ] Other liquidity sniping methods.
-- [ ] Contract analyzer.
+You can view the latest feature list here: https://eryx.io/docs/#features
+
 
 ### Supported chains
-- Binance Smart Chain [tested]
-- Avalanche [tested]
-- Ethereum [tested]
-- Polygon [tested]
-- Fantom [not tested]
+- Binance Smart Chain
+- Avalanche
+- Ethereum
+- Polygon
+- Cronos
+- Milkomeda
+- Metis
+- Fantom
 
 If you wish to change the blockchain the bot will operate on, just change the WSS_NODE endpoint in config.ini to the right endpoint.
 
@@ -89,6 +91,8 @@ If you wish to change the blockchain the bot will operate on, just change the WS
 - Binance Smart Chain: wss://bsc-ws-node.nariox.org:443
 - Ethereum: wss://main-light.eth.linkpool.io/ws
 - Polygon: wss://rpc-mainnet.matic.network
+
+_Note: The nodes listed above are free nodes and are NOT always online._
 
 ### Supported tokens
 The bot currently supports any token using the uniswap interface.
