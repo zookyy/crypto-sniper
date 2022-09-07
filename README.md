@@ -84,6 +84,7 @@ You can view the latest feature list here: https://eryx.io/docs/#features
 - Milkomeda
 - Metis
 - Fantom
+- Dogechain
 
 If you wish to change the blockchain the bot will operate on, just change the WSS_NODE endpoint in config.ini to the right endpoint.
 
