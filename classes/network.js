@@ -5,10 +5,10 @@
 /*             Discord: Zooky.#1003                */
 /*              Telegram: @zookyy                  */
 /*                                                 */
-/*  Github: https://github.com/zookyy/bsc-sniper   */
+/*          Website: https://www.eryx.io           */
 /*                                                 */
 /*  If you wish to purchase the premium version    */
-/*  please visit the github link above.            */
+/*       please visit the github link above.       */
 /*                                                 */
 /*=================================================*/
 
@@ -100,7 +100,7 @@ class Network {
 
 		} catch(e) {
 
-			msg.error(`[error::network] ${e}`);
+			msg.error(`[error] ${e}`);
 
 			process.exit();
 
@@ -110,7 +110,7 @@ class Network {
 
 	async prepare() {
 
-		msg.primary(`[debug::network] Preparing network..`);
+		msg.primary(`Preparing network..`);
 
 		// format maxInt.
     	const maxInt = (ethers.BigNumber.from("2").pow(ethers.BigNumber.from("256").sub(ethers.BigNumber.from("1")))).toString();
@@ -121,7 +121,7 @@ class Network {
 
 	    	cache.setAddressArtifacts(config.cfg.contracts.input, (await this.contract_in.decimals()), await this.contract_in.symbol());
 
-	    	msg.primary(`[debug::network] Approving balance for ${cache.data.addresses[config.cfg.contracts.input].symbol}.`);
+	    	msg.primary(`Approving balance for ${cache.data.addresses[config.cfg.contracts.input].symbol}.`);
 
 	    	// approve output (for later)
 	        const inTx = await this.contract_in.approve(
@@ -137,16 +137,16 @@ class Network {
 	        let inReceipt = await inTx.wait();
 
 	        if(!inReceipt.logs[0].transactionHash) {
-	            msg.error(`[error::network] Could not approve ${cache.data.addresses[config.cfg.contracts.input].symbol}. (cache)`);
+	            msg.error(`[error] Could not approve ${cache.data.addresses[config.cfg.contracts.input].symbol}. (cache)`);
 	            process.exit();
 	        }
 
-	       	msg.success(`[debug::network] ${cache.data.addresses[config.cfg.contracts.input].symbol} has been approved. (cache)`);
+	       	msg.success(`${cache.data.addresses[config.cfg.contracts.input].symbol} has been approved. (cache)`);
 
 	       	await cache.save();
 
 	    } else {
-	    	msg.success(`[debug::network] ${cache.data.addresses[config.cfg.contracts.input].symbol} has already been approved. (cache)`);
+	    	msg.success(`${cache.data.addresses[config.cfg.contracts.input].symbol} has already been approved. (cache)`);
 	    }
 
 	    if(!cache.isAddressCached(config.cfg.contracts.output)) {
@@ -154,7 +154,7 @@ class Network {
 
 	    	cache.setAddressArtifacts(config.cfg.contracts.output, (await this.contract_out.decimals()), await this.contract_out.symbol());
 
-	    	msg.primary(`[debug::network] Approving balance for ${cache.data.addresses[config.cfg.contracts.output].symbol}.`);
+	    	msg.primary(`Approving balance for ${cache.data.addresses[config.cfg.contracts.output].symbol}.`);
 
 	    	// approve output (for later)
 	        const outTx = await this.contract_out.approve(
@@ -170,16 +170,16 @@ class Network {
 	        let outReceipt = await outTx.wait();
 
 	        if(!outReceipt.logs[0].transactionHash) {
-	            msg.error(`[error::network] Could not approve ${cache.data.addresses[config.cfg.contracts.output].symbol}. (cache)`);
+	            msg.error(`[error] Could not approve ${cache.data.addresses[config.cfg.contracts.output].symbol}. (cache)`);
 	            process.exit();
 	        }
 
-	        msg.success(`[debug::network] ${cache.data.addresses[config.cfg.contracts.output].symbol} has been approved. (cache)`);
+	        msg.success(`${cache.data.addresses[config.cfg.contracts.output].symbol} has been approved. (cache)`);
 
 	        await cache.save();
 
 	    } else {
-	    	msg.success(`[debug::network] ${cache.data.addresses[config.cfg.contracts.output].symbol} has already been approved. (cache)`);
+	    	msg.success(`${cache.data.addresses[config.cfg.contracts.output].symbol} has already been approved. (cache)`);
 	    }
 
 	    // now that the cache is done, restructure variables
@@ -206,7 +206,7 @@ class Network {
 
 	    } catch(e) {
 
-	        console.log(`[error::swap] ${e.error}`);
+	        console.log(`[error] ${e.error}`);
 	        process.exit();
 
 	    }
@@ -230,7 +230,7 @@ class Network {
 
 	        // check if is using enough gas.
 	        if(gas > parseInt(config.cfg.transaction.gas_limit) || gas > parseInt(config.cfg.transaction.gas_limit)) {
-	            msg.error(`[error::simulate] The transaction requires at least ${gas} gas, your limit is ${config.cfg.transaction.gas_limit}.`);
+	            msg.error(`[error] The transaction requires at least ${gas} gas, your limit is ${config.cfg.transaction.gas_limit}.`);
 	            process.exit();
 	        }
 
@@ -238,7 +238,7 @@ class Network {
 
 	    } catch(e) {
 
-	        console.log(`[error::estimategas] ${e.error}`);
+	        console.log(`[error] ${e.error}`);
 	        return this.estimateTransaction(amountIn, amountOutMin, contracts);
 
 	    }
@@ -261,9 +261,9 @@ class Network {
 
 	        // if simulation passed, notify, else, exit
 	        if(estimationPassed) {
-	            msg.success(`[debug::transact] Estimation passed successfully. proceeding with transaction.`);
+	            msg.success(`Estimation passed successfully. proceeding with transaction.`);
 	        } else {
-	            msg.error(`[error::transact] Estimation did not pass checks. exiting..`);
+	            msg.error(`[error] Estimation did not pass checks. exiting..`);
 	            process.exit();
 	        }
 
@@ -273,7 +273,7 @@ class Network {
 	            [from, to]
 	        );
 
-	        msg.success(`[debug::transact] TX has been submitted. Waiting for response..\n`);
+	        msg.success(`TX has been submitted. Waiting for response..\n`);
 
 	        let receipt = await tx.wait();
 
@@ -287,7 +287,7 @@ class Network {
 	    } catch(err) {
 
 	        if(err.error && err.error.message){
-	            msg.error(`[error::transact] ${err.error.message}`);
+	            msg.error(`[error] ${err.error.message}`);
 	        }
 	        else
 	            console.log(err);
@@ -309,7 +309,7 @@ class Network {
 
 	    // testing
 	    if (formattedbnbValue < 1) {
-	        msg.warning("[debug::liquidity] There is not enough liquidity yet.");
+	        msg.warning("There is not enough liquidity yet.");
 	        return this.getLiquidity(pair);
 	    }
 
@@ -323,7 +323,7 @@ class Network {
 
 	    // no pair found, re-launch
 	    if (!pairAddress || (pairAddress.toString().indexOf('0x0000000000000') > -1)) {
-	        msg.warning("[debug::pair] Could not find pair for specified contracts. retrying..");
+	        msg.warning("Could not find pair for specified contracts. retrying..");
 	        return this.getPair(contract_in, contract_out);
 	    }
 

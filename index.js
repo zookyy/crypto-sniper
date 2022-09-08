@@ -5,10 +5,10 @@
 /*             Discord: Zooky.#1003                */
 /*              Telegram: @zookyy                  */
 /*                                                 */
-/*  Github: https://github.com/zookyy/bsc-sniper   */
+/*          Website: https://www.eryx.io           */
 /*                                                 */
 /*  If you wish to purchase the premium version    */
-/*  please visit the github link above.            */
+/*       please visit the github link above.       */
 /*                                                 */
 /*=================================================*/
 
@@ -24,12 +24,12 @@ const { msg, config, cache, network } = require('./classes/main.js');
 
 console.clear();
 
-msg.primary('[debug::main] Loading..');
+msg.primary('Loading..');
 
 // error handler
 process.on('uncaughtException', (err, origin) => {
 
-	msg.error(`[error::process] Exception: ${err}`);
+	msg.error(`[error] Exception: ${err}`);
 	process.exit();
 
 });
@@ -44,7 +44,7 @@ process.on('uncaughtException', (err, origin) => {
 	await config.load('config.ini');
 
     if(!network.isETH(config.cfg.contracts.input)) {
-        msg.error(`[error::main] The free version of the bot can only use the BNB pair.`);
+        msg.error(`[error] The free version of the bot can only use the BNB pair.`);
         process.exit();
     }
 
@@ -64,36 +64,36 @@ process.on('uncaughtException', (err, origin) => {
 /*             Discord: Zooky.#1003                */
 /*              Telegram: @zookyy                  */
 /*                                                 */
-/*  Github: https://github.com/zookyy/bsc-sniper   */
+/*          Website: https://www.eryx.io           */
 /*                                                 */
 /*  If you wish to purchase the premium version    */
-/*  please add me using the platforms above.       */
+/*       please visit the github link above.       */
 /*                                                 */
 /*=================================================*/\n\n`);
 
-    msg.primary('[debug::main] Eryx Lite has been started.');
+    msg.primary('Eryx Lite has been started.');
 
 	// balance check
     if(network.bnb_balance == 0) {
-    	msg.error(`[error::init] You don't have any BNB in your account. (used for gas fee)`);
+    	msg.error(`[error] You don't have any BNB in your account. (used for gas fee)`);
         process.exit();
     }
 
     // check if has enough input balance
     if((network.input_balance < config.cfg.transaction.amount_in_formatted)) {
-        msg.error(`[error::init] You don't have enough input balance for this transaction.`);
+        msg.error(`[error] You don't have enough input balance for this transaction.`);
         process.exit();
     }
 
     // fetch pair
     let pair = await network.getPair(config.cfg.contracts.input, config.cfg.contracts.output);
 
-    msg.primary("[debug::main] Pair address: " + JSON.stringify(pair) + ".");
+    msg.primary("Pair address: " + JSON.stringify(pair) + ".");
 
     // get liquidity
     let liquidity = await network.getLiquidity(pair);
 
-    msg.primary(`[debug::main] Liquidity found: ${liquidity} ${cache.data.addresses[config.cfg.contracts.input].symbol}.\n`);
+    msg.primary(`Liquidity found: ${liquidity} ${cache.data.addresses[config.cfg.contracts.input].symbol}.\n`);
 
     // get starting tick
     let startingTick = Math.floor(new Date().getTime() / 1000);
@@ -105,7 +105,7 @@ process.on('uncaughtException', (err, origin) => {
     );
 
     if(receipt == null) {
-        error('[error::main] Could not retrieve receipt from buy tx.');
+        msg.error('[error] Could not retrieve receipt from buy tx.');
         process.exit();
     }
 

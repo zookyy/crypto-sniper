@@ -5,10 +5,10 @@
 /*             Discord: Zooky.#1003                */
 /*              Telegram: @zookyy                  */
 /*                                                 */
-/*  Github: https://github.com/zookyy/bsc-sniper   */
+/*          Website: https://www.eryx.io           */
 /*                                                 */
 /*  If you wish to purchase the premium version    */
-/*  please visit the github link above.            */
+/*       please visit the github link above.       */
 /*                                                 */
 /*=================================================*/
 

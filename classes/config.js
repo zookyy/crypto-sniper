@@ -5,10 +5,10 @@
 /*             Discord: Zooky.#1003                */
 /*              Telegram: @zookyy                  */
 /*                                                 */
-/*  Github: https://github.com/zookyy/bsc-sniper   */
+/*          Website: https://www.eryx.io           */
 /*                                                 */
 /*  If you wish to purchase the premium version    */
-/*  please visit the github link above.            */
+/*       please visit the github link above.       */
 /*                                                 */
 /*=================================================*/
 
@@ -73,7 +73,7 @@ class Config {
 
 	    // no address specified, fail with error
 	    if(!_name.startsWith('0x')) {
-	    	msg.error(`[error::config] Contract "${_name}" does not exist, please use an address instead.`);
+	    	msg.error(`[error] Contract "${_name}" does not exist, please use an address instead.`);
 	    	process.exit();
 	    }
 
