@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://i.imgur.com/mF3T0jn.png">
     <h3 align="center">Eryx - Crypto Sniper</h3>
-    ![discord](https://img.shields.io/discord/921546042346979388?color=5865F2&label=Discord&logo=discord&logoColor=white)
+    <img src="https://img.shields.io/discord/921546042346979388?color=5865F2&label=Discord&logo=discord&logoColor=white&raw=true"></img>
     <p align="center">
         Simple yet fast and efficient sniper-bot running on the blockchain.
         <hr>
