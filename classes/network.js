@@ -29,7 +29,11 @@ class Network {
 		try {
 
 			// initialize stuff
-			this.node = new ethers.providers.WebSocketProvider(config.cfg.wallet.wss_node);
+			if(config.cfg.wallet.wss_node.startsWith('http')) {
+				this.node = new ethers.providers.JsonRpcProvider(config.cfg.wallet.wss_node);
+			} else {
+				this.node = new ethers.providers.WebSocketProvider(config.cfg.wallet.wss_node);
+			}
 
 			// initialize account
 			this.wallet = new ethers.Wallet(config.cfg.wallet.secret_key);
@@ -38,9 +42,36 @@ class Network {
 			// get network id for later use
 			this.network = await this.node.getNetwork();
 
+			// supported chains
+			this.chains = {
+
+				// ETH Mainnet
+				'1': {
+					'name': 'Ethereum',
+					'symbol': 'ETH',
+					'wrapped': 'WETH',
+					'token': '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+					'router': '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+					'factory': '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
+					'page': 'https://etherscan.io'
+				},
+
+				// BSC Mainnet
+				'56': {
+					'name': 'Binance Smart Chain',
+					'symbol': 'BNB',
+					'wrapped': 'WBNB',
+					'token': '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+					'router': '0x10ED43C718714eb63d5aA57B78B54704E256024E',
+					'factory': '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73',
+					'page': 'https://bscscan.com'
+				},
+
+			};
+
 			// pcs stuff for later use
 			this.factory = new ethers.Contract(
-			    '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73',
+			    this.chains[this.network.chainId].factory,
 			    [
 			        'event PairCreated(address indexed token0, address indexed token1, address pair, uint)',
 			        'function getPair(address tokenA, address tokenB) external view returns (address pair)'
@@ -49,7 +80,7 @@ class Network {
 			);
 
 			this.router = new ethers.Contract(
-			    '0x10ED43C718714eb63d5aA57B78B54704E256024E',
+			    this.chains[this.network.chainId].router,
 			    [
 			        'function getAmountsOut(uint amountIn, address[] memory path) public view returns (uint[] memory amounts)',
 			        'function swapExactTokensForTokens(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline) external returns (uint[] memory amounts)',
@@ -89,6 +120,7 @@ class Network {
 
 			// load user balances (for later use)
 			this.bnb_balance = parseInt(await this.account.getBalance());
+
 			this.input_balance = parseInt((this.isETH(config.cfg.contracts.input) ? this.bnb_balance : await this.contract_in.balanceOf(this.account.address)));		
 			this.output_balance = parseInt((this.isETH(config.cfg.contracts.output) ? this.bnb_balance : await this.contract_out.balanceOf(this.account.address)));	
 
@@ -117,69 +149,19 @@ class Network {
 
 		// cache & prepare contracts
 	    if(!cache.isAddressCached(config.cfg.contracts.input)) {
-	    	cache.createAddress(config.cfg.contracts.input);
 
+	    	cache.createAddress(config.cfg.contracts.input);
 	    	cache.setAddressArtifacts(config.cfg.contracts.input, (await this.contract_in.decimals()), await this.contract_in.symbol());
 
-	    	msg.primary(`Approving balance for ${cache.data.addresses[config.cfg.contracts.input].symbol}.`);
-
-	    	// approve output (for later)
-	        const inTx = await this.contract_in.approve(
-	            this.router.address,
-	            maxInt, 
-	            {
-	                'gasLimit': config.cfg.transaction.gas_limit,
-	                'gasPrice': config.cfg.transaction.gas_price,
-	                'nonce': (this.getNonce())
-	            }
-	        );
-
-	        let inReceipt = await inTx.wait();
-
-	        if(!inReceipt.logs[0].transactionHash) {
-	            msg.error(`[error] Could not approve ${cache.data.addresses[config.cfg.contracts.input].symbol}. (cache)`);
-	            process.exit();
-	        }
-
-	       	msg.success(`${cache.data.addresses[config.cfg.contracts.input].symbol} has been approved. (cache)`);
-
 	       	await cache.save();
-
-	    } else {
-	    	msg.success(`${cache.data.addresses[config.cfg.contracts.input].symbol} has already been approved. (cache)`);
 	    }
 
 	    if(!cache.isAddressCached(config.cfg.contracts.output)) {
-	    	cache.createAddress(config.cfg.contracts.output);
 
+	    	cache.createAddress(config.cfg.contracts.output);
 	    	cache.setAddressArtifacts(config.cfg.contracts.output, (await this.contract_out.decimals()), await this.contract_out.symbol());
 
-	    	msg.primary(`Approving balance for ${cache.data.addresses[config.cfg.contracts.output].symbol}.`);
-
-	    	// approve output (for later)
-	        const outTx = await this.contract_out.approve(
-	            this.router.address,
-	            maxInt, 
-	            {
-	                'gasLimit': config.cfg.transaction.gas_limit,
-	                'gasPrice': config.cfg.transaction.gas_price,
-	                'nonce': (this.getNonce())
-	            }
-	        );
-
-	        let outReceipt = await outTx.wait();
-
-	        if(!outReceipt.logs[0].transactionHash) {
-	            msg.error(`[error] Could not approve ${cache.data.addresses[config.cfg.contracts.output].symbol}. (cache)`);
-	            process.exit();
-	        }
-
-	        msg.success(`${cache.data.addresses[config.cfg.contracts.output].symbol} has been approved. (cache)`);
-
 	        await cache.save();
-
-	    } else {
-	    	msg.success(`${cache.data.addresses[config.cfg.contracts.output].symbol} has already been approved. (cache)`);
 	    }
 
 	    // now that the cache is done, restructure variables
@@ -299,7 +281,7 @@ class Network {
 	}
 
 	isETH(token) {
-		return (token.toLowerCase() == ('0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c').toLowerCase())
+		return (token.toLowerCase() == this.chains[this.network.chainId].token.toLowerCase())
 	}
 
 	async getLiquidity(pair) {
