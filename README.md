@@ -60,6 +60,8 @@ Current features supported by the **FREE** version:
 Additional features supported by the **premium** version:
 - [x] Buying (ALL pairs)
 - [x] Multi blockchain support.
+- [x] Bytecode checker / blocker.
+- [x] MethodID waiter.
 - [x] Multi-buy mode (all transactions are in the same block). 
 - [x] Wrapped mode for any ETH-like token (BNB, MATIC, etc..). 
 - [x] Tax checker (all pairs are supported)
