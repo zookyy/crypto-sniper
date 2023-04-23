@@ -171,50 +171,200 @@ BUY_SLIPPAGE=10
 To launch the bot use the command ```node index.js```
 
 #### Premium parameters
+
+##### General
 <table>
   <tr>
     <th>Parameter</th>
     <th>Description</th>
+    <th>Accepts</th>
   </tr>
   <tr>
     <td>--buy-only</td>
     <td>Enables manual buy mode. This will only buy the token and then exit.</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>--sell-only</td>
     <td>Enables manual sell mode. This will only sell the token and then exit.</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>--input</td>
     <td>Overwrites the input parameter in the config.</td>
+    <td><code>contract address</code></td>
   </tr>
   <tr>
     <td>--output</td>
     <td>Overwrites the output parameter in the config.</td>
-  </tr>
-  <tr>
-    <td>--wrapped</td>
-    <td>Uses the wrapped version of the bnb/eth token. (available for all blockchains)</td>
-  </tr>
-  <tr>
-    <td>--verify-tax</td>
-    <td>Checks wether the taxes for buying / selling does not exceed the limits configured.</td>
+    <td><code>contract address</code></td>
   </tr>
   <tr>
     <td>--config</td>
     <td>Used to specify a different config path (used for multi configs setup).</td>
-  </tr>
-  <tr>
-    <td>--block-offset</td>
-    <td>Waits an amount of blocks before sending out the buy transaction.</td>
-  </tr>
-  <tr>
-    <td>--spam</td>
-    <td>Sends an x amount of transactions at the same time. (spam buy)</td>
+    <td><code>string</code></td>
   </tr>
   <tr>
     <td>--force-approve</td>
     <td>Forces the approve transaction for the input/output. (used for debugging)</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>--simulate</td>
+    <td>Simulate your current config as a real transaction.</td>
+    <td>-</td>
+  </tr>
+</table>
+
+##### Transaction
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Accepts</th>
+  </tr>
+  <tr>
+    <td>--wrapped</td>
+    <td>Uses the wrapped version of the bnb/eth token. (available for all blockchains)</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>--block-offset</td>
+    <td>Waits an amount of blocks before sending out the buy transaction.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--spam</td>
+    <td>Sends an x amount of transactions at the same time. (spam buy)</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--amount_in</td>
+    <td>Used to specify the amount you wish to spend with your INPUT token.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--amount_out</td>
+    <td>Used to specify the amount you wish to buy from your OUTPUT token.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--min_liq</td>
+    <td>Used to specify the minimum liquidity before the bot starts to buy.</td>
+    <td><code>number</code></td>
+  </tr>
+</table>
+
+##### Tax
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Accepts</th>
+  </tr>
+  <tr>
+    <td>--verify-tax</td>
+    <td>Checks wether the taxes for buying / selling does not exceed the limits configured.</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>--max-buy-tax</td>
+    <td>Sets the max allowed buy tax.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--max-sell-tax</td>
+    <td>Sets the max allowed sell tax.</td>
+    <td><code>number</code></td>
+  </tr>
+</table>
+
+##### Gas
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Accepts</th>
+  </tr>
+  <tr>
+    <td>--gas-price</td>
+    <td>Sets the gas price.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--gas-limit</td>
+    <td>Sets the gas limit.</td>
+    <td><code>number</code></td>
+  </tr>
+</table>
+
+##### Slippage
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Accepts</th>
+  </tr>
+  <tr>
+    <td>--buy-slippage</td>
+    <td>Sets the buy slippage.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--sell-slippage</td>
+    <td>Sets the sell slippage.</td>
+    <td><code>number</code></td>
+  </tr>
+</table>
+
+##### Autosell
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Accepts</th>
+  </tr>
+  <tr>
+    <td>--sell-with-multiplier</td>
+    <td>Enables the sell with multiplier autosell mode.</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>--sell-multiplier</td>
+    <td>Sets the multiplier to sell at for the sell with multiplier mode.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr><td></td><td></td><td></td></tr>
+  <tr>
+    <td>--sell-with-delay</td>
+    <td>Enables the sell with delay autosell mode.</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>--sell-delay</td>
+    <td>Sets the delay to sell with for the sell with delay mode.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr><td></td><td></td><td></td></tr>
+  <tr>
+    <td>--sell-on-loss</td>
+    <td>Enables the sell on loss autosell mode.</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>--sl-minimum-multiplier</td>
+    <td>Sets the minimum multiplier for the sell on loss mode to start.</td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td>--sl-percentage</td>
+    <td>Sets the percentage of the maximum impact on your multiplier.</td>
+    <td><code>number</code></td>
   </tr>
 </table>
 
