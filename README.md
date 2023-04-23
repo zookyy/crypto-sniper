@@ -12,6 +12,8 @@
         <a href="https://eryx.io">🌐 Visit our website</a>
 	/
         <a href="https://eryx.io/discord">💬 Join our Discord</a>
+	/
+	<a href="https://t.me/+-NmKN0QNaUA1Njg8">💬 Join our Telegram</a>
     </p>
 </div>
 
