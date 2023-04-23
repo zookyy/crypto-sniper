@@ -13,7 +13,7 @@
 	/
         <a href="https://eryx.io/discord">💬 Join our Discord</a>
 	/
-	<a href="https://t.me/+-NmKN0QNaUA1Njg8">💬 Join our Telegram</a>
+	<a href="https://t.me/eryxcrypto">💬 Join our Telegram</a>
     </p>
 </div>
 
