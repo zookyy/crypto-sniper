@@ -110,7 +110,7 @@ process.on('uncaughtException', (err, origin) => {
     }
 
     console.log(chalk.hex('#2091F6').inverse('==================== [TX COMPLETED] ===================='));
-    console.log(chalk.hex('#2091F6')('• ') + chalk.hex('#EBF0FA')(`From ${cache.data.addresses[config.cfg.contracts.input].symbol} (${config.cfg.transaction.amount_in} ${cache.data.addresses[config.cfg.contracts.input].symbol}) -> ${cache.data.addresses[config.cfg.contracts.output].symbol} (minimum ${network.amount_bought_unformatted} ${cache.data.addresses[config.cfg.contracts.output].symbol})`));
+    console.log(chalk.hex('#2091F6')('• ') + chalk.hex('#EBF0FA')(`From ${cache.data.addresses[config.cfg.contracts.input].symbol} (${config.cfg.transaction.amount_in} ${cache.data.addresses[config.cfg.contracts.input].symbol}) -> ${cache.data.addresses[config.cfg.contracts.output].symbol}`));
     console.log(chalk.hex('#2091F6')('• ') + chalk.hex('#EBF0FA')(`${network.chains[network.network.chainId].page}/tx/${receipt.logs[1].transactionHash}`));
     console.log(chalk.hex('#2091F6').inverse('========================================================\n'));
 
