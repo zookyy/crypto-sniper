@@ -209,7 +209,7 @@ class Network {
 
 	    } catch(e) {
 
-	        console.log(`[error] ${e.error}`);
+	        console.log(`[error] ${e}`);
 	        process.exit();
 
 	    }
@@ -241,7 +241,7 @@ class Network {
 
 	    } catch(e) {
 
-	        console.log(`[error] ${e.error}`);
+	        console.log(`[error] ${e}`);
 	        return this.estimateTransaction(amountIn, amountOutMin, contracts);
 
 	    }
