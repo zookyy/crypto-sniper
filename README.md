@@ -3,7 +3,8 @@
     <h3 align="center">Eryx - Crypto Sniper</h3>
     <img src="https://img.shields.io/discord/921546042346979388?color=5865F2&label=Discord&logo=discord&logoColor=white&raw=true"></img>
     <p align="center">
-        Simple yet fast and efficient sniper-bot running on the blockchain.
+        Simple yet fast and efficient sniper-bot running on the blockchain. 
+	<h3>Eryx Solana Edition out now! Check it out on the website: https://eryx.io.</h3><br>
         <hr>
         <a href="#getting-started">⬇️ Download Lite Version</a>
         /
